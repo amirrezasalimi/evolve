@@ -39,7 +39,7 @@ const colors = [
   "#87A8D0", // Powder Blue
 ];
 const popLength = 4;
-const max_generations = 3;
+const maxGenerations = 3;
 
 const getUnusedColor = (usedColors: string[]) => {
   const availableColors = colors.filter((color) => !usedColors.includes(color));
@@ -268,7 +268,7 @@ function App() {
         JSON.stringify(data.generations)
       ) as Data["generations"];
 
-      for (let i = 0; i < max_generations; i++) {
+      for (let i = 0; i < maxGenerations; i++) {
         // Tournament selection for parents
         const selectParent = () => {
           const tournamentSize = 3;
